@@ -130,8 +130,32 @@ struct TodayView: View {
     private func audioControlsSection(verse: Verse) -> some View {
         VStack(spacing: 16) {
             playButton(verse: verse)
+            readExplanationButton(verse: verse)
             audioOptionsRow
         }
+    }
+
+    private func readExplanationButton(verse: Verse) -> some View {
+        Button(action: {
+            if audioService.isPlaying {
+                audioService.stop()
+            } else {
+                audioService.speakExplanation(verse.explanation)
+            }
+        }) {
+            HStack(spacing: 12) {
+                Image(systemName: audioService.isPlaying ? "stop.circle" : "text.bubble")
+                    .font(.title2)
+                Text(audioService.isPlaying ? "Stop" : "Read Explanation")
+                    .fontWeight(.medium)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(Color.secondary.opacity(0.1))
+            .foregroundStyle(.secondary)
+            .cornerRadius(12)
+        }
+        .padding(.horizontal)
     }
 
     private func playButton(verse: Verse) -> some View {

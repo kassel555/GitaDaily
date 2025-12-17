@@ -66,6 +66,21 @@ final class AudioService: NSObject, ObservableObject {
         speakCurrentPhase()
     }
 
+    func speakExplanation(_ text: String) {
+        guard !isPlaying else { return }
+
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = VoiceManager.bestVoice(for: .english, phase: .english)
+        utterance.rate = Config.normalRate
+        utterance.pitchMultiplier = 1.0
+        utterance.volume = 1.0
+        utterance.preUtteranceDelay = Config.preDelay
+        utterance.postUtteranceDelay = Config.postDelay
+
+        isPlaying = true
+        synthesizer.speak(utterance)
+    }
+
     func stop() {
         synthesizer.stopSpeaking(at: .immediate)
         resetState()
