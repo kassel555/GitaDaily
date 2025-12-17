@@ -17,8 +17,18 @@ struct VoiceManager {
     ]
 
     private static let preferredEnglishVoices = [
+        // Premium voices (most natural)
+        "com.apple.voice.premium.en-US.Zoe",
+        "com.apple.voice.premium.en-US.Ava",
         "com.apple.voice.premium.en-US.Samantha",
+        "com.apple.voice.premium.en-GB.Serena",
+        // Enhanced voices
+        "com.apple.voice.enhanced.en-US.Zoe",
+        "com.apple.voice.enhanced.en-US.Ava",
         "com.apple.voice.enhanced.en-US.Samantha",
+        "com.apple.voice.enhanced.en-GB.Serena",
+        // Siri voices
+        "com.apple.ttsbundle.siri_Nicky_en-US_compact",
         "com.apple.ttsbundle.siri_Samantha_en-US_compact"
     ]
 

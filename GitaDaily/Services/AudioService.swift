@@ -15,10 +15,12 @@ final class AudioService: NSObject, ObservableObject {
     struct Config {
         static let normalRate: Float = AVSpeechUtteranceDefaultSpeechRate * 0.75
         static let slowRate: Float = AVSpeechUtteranceMinimumSpeechRate * 1.3
+        static let englishRate: Float = AVSpeechUtteranceDefaultSpeechRate * 0.5  // Slower for clarity
         static let preDelay: TimeInterval = 0.1
         static let postDelay: TimeInterval = 0.3
         static let phaseDelay: TimeInterval = 0.5
         static let repeatDelay: TimeInterval = 0.8
+        static let sentenceDelay: TimeInterval = 0.4  // Pause between sentences
     }
 
     // MARK: - Private Properties
@@ -69,16 +71,40 @@ final class AudioService: NSObject, ObservableObject {
     func speakExplanation(_ text: String) {
         guard !isPlaying else { return }
 
-        let utterance = AVSpeechUtterance(string: text)
+        // Process text for more natural speech
+        let processedText = processEnglishText(text)
+
+        let utterance = AVSpeechUtterance(string: processedText)
         utterance.voice = VoiceManager.bestVoice(for: .english, phase: .english)
-        utterance.rate = Config.normalRate
-        utterance.pitchMultiplier = 1.0
+        utterance.rate = Config.englishRate  // Slower for clarity
+        utterance.pitchMultiplier = 1.05  // Slightly higher pitch for warmth
         utterance.volume = 1.0
         utterance.preUtteranceDelay = Config.preDelay
         utterance.postUtteranceDelay = Config.postDelay
 
         isPlaying = true
         synthesizer.speak(utterance)
+    }
+
+    /// Process English text for more natural TTS
+    private func processEnglishText(_ text: String) -> String {
+        var result = text
+
+        // Add pauses after sentence-ending punctuation
+        result = result.replacingOccurrences(of: ". ", with: "... ")
+        result = result.replacingOccurrences(of: "! ", with: "!... ")
+        result = result.replacingOccurrences(of: "? ", with: "?... ")
+
+        // Add slight pauses after commas and semicolons
+        result = result.replacingOccurrences(of: ", ", with: ",, ")
+        result = result.replacingOccurrences(of: "; ", with: ";; ")
+        result = result.replacingOccurrences(of: ": ", with: ":: ")
+
+        // Add pauses around em-dashes
+        result = result.replacingOccurrences(of: "—", with: " — ")
+        result = result.replacingOccurrences(of: " - ", with: " , ")
+
+        return result
     }
 
     func stop() {
