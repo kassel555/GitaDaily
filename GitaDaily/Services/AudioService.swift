@@ -8,7 +8,7 @@ final class AudioService: NSObject, ObservableObject {
 
     @Published var isPlaying = false
     @Published var currentRepeat = 0
-    @Published var pronunciationMode: PronunciationMode = .transliteration
+    @Published var pronunciationMode: PronunciationMode = .romanized
 
     // MARK: - Configuration
 
@@ -39,8 +39,12 @@ final class AudioService: NSObject, ObservableObject {
     func speak(devanagari: String, transliteration: String, english: String = "", repeats: Int = 1, slowSpeed: Bool = false) {
         guard !isPlaying else { return }
 
+        // Convert Devanagari to phonetic English for romanized mode
+        let romanizedText = TransliterationCleaner.devanagariToEnglishPhonetic(devanagari)
+
         playbackState = PlaybackState(
             devanagari: devanagari,
+            romanized: TransliterationCleaner.syllabify(romanizedText),
             transliteration: TransliterationCleaner.clean(transliteration),
             english: english,
             totalRepeats: repeats,
@@ -49,6 +53,8 @@ final class AudioService: NSObject, ObservableObject {
 
         // Set initial phase based on mode
         switch pronunciationMode {
+        case .romanized:
+            playbackState.phase = .romanized
         case .devanagari, .both:
             playbackState.phase = .devanagari
         case .transliteration:
@@ -96,6 +102,8 @@ final class AudioService: NSObject, ObservableObject {
 
     private func textAndVoice(for phase: SpeakingPhase) -> (String, AVSpeechSynthesisVoice?) {
         switch pronunciationMode {
+        case .romanized:
+            return (playbackState.romanized, VoiceManager.bestVoice(for: .romanized, phase: .romanized))
         case .devanagari:
             return (playbackState.devanagari, VoiceManager.bestVoice(for: .devanagari, phase: .devanagari))
         case .transliteration:
@@ -105,6 +113,8 @@ final class AudioService: NSObject, ObservableObject {
         case .both:
             let voice = VoiceManager.bestVoice(for: .both, phase: phase)
             switch phase {
+            case .romanized:
+                return (playbackState.romanized, voice)
             case .devanagari:
                 return (playbackState.devanagari, voice)
             case .transliteration:
@@ -139,6 +149,8 @@ final class AudioService: NSObject, ObservableObject {
         if currentRepeat < playbackState.totalRepeats {
             // Reset to initial phase based on mode
             switch pronunciationMode {
+            case .romanized:
+                playbackState.phase = .romanized
             case .devanagari, .both:
                 playbackState.phase = .devanagari
             case .transliteration:
@@ -186,9 +198,10 @@ extension AudioService: AVSpeechSynthesizerDelegate {
 
 private struct PlaybackState {
     var devanagari: String = ""
+    var romanized: String = ""
     var transliteration: String = ""
     var english: String = ""
     var totalRepeats: Int = 1
     var slowSpeed: Bool = false
-    var phase: SpeakingPhase = .devanagari
+    var phase: SpeakingPhase = .romanized
 }

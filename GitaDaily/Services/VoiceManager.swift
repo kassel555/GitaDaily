@@ -26,6 +26,8 @@ struct VoiceManager {
 
     static func bestVoice(for mode: PronunciationMode, phase: SpeakingPhase) -> AVSpeechSynthesisVoice? {
         switch (mode, phase) {
+        case (.romanized, _), (.both, .romanized):
+            return bestEnglishVoice()  // Use clear US English for romanized Sanskrit
         case (.devanagari, _), (.both, .devanagari):
             return bestHindiVoice()
         case (.transliteration, _), (.both, .transliteration):
@@ -108,12 +110,14 @@ struct VoiceManager {
 // MARK: - Speaking Phase
 
 enum SpeakingPhase {
+    case romanized
     case devanagari
     case transliteration
     case english
 
     var next: SpeakingPhase? {
         switch self {
+        case .romanized: return nil
         case .devanagari: return .transliteration
         case .transliteration: return nil
         case .english: return nil
