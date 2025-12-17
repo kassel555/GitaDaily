@@ -1,0 +1,41 @@
+name: GitaDaily
+options:
+  bundleIdPrefix: com.gitadaily
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+  developmentLanguage: en
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    GENERATE_INFOPLIST_FILE: YES
+
+targets:
+  GitaDaily:
+    type: application
+    platform: iOS
+    sources:
+      - path: GitaDaily
+        excludes:
+          - "**/*.md"
+    resources:
+      - path: GitaDaily/Resources
+        buildPhase: resources
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Gita Daily
+        UILaunchScreen:
+          UIColorName: LaunchScreenBackground
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSUserNotificationsUsageDescription: "We'll send you a daily reminder to learn today's verse and help you maintain your streak"
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.gitadaily.app
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_EMIT_LOC_STRINGS: YES

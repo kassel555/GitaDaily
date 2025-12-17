@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D476C1B044C776D06D224F4 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD0E439D53B1CB39927CF7 /* NotificationManager.swift */; };
+		28C6F1AA95B0CCA031415E08 /* DailyVerseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F843183A88EB3FCB92173C5C /* DailyVerseService.swift */; };
+		3554D7E5178C091C4C930A15 /* verses.json in Resources */ = {isa = PBXBuildFile; fileRef = C0453B94DEC0D02D785A6C1B /* verses.json */; };
+		453EA8D227718C5230AFA1F5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E19F3CC9DEB15F2B87C60 /* SettingsView.swift */; };
+		503921D3A6B275244ADD7D93 /* GitaDailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B363BD258B2C17E3ED103 /* GitaDailyApp.swift */; };
+		844A99A625D17110FE7FF65C /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120819946D6776D5CF582AB9 /* AudioService.swift */; };
+		86C440381837B7C9E420D727 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEBD8D162FA915497CB832 /* Verse.swift */; };
+		88DA294832A1100358CD1BB4 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119742DBB6615C826816AE41 /* HistoryView.swift */; };
+		8AC8D16BB9D664F6B19A65DB /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A5515D0CB832CFCB38367 /* TodayView.swift */; };
+		A4B22B0763CF98470BE8F894 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D2D51EFBDF4EAE3D0575C /* ContentView.swift */; };
+		AA1111111111111111111111 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1111111111111111111111 /* AboutView.swift */; };
+		AA2222222222222222222222 /* VerseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2222222222222222222222 /* VerseDetailView.swift */; };
+		AA3333333333333333333333 /* TopicBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3333333333333333333333 /* TopicBadge.swift */; };
+		AA4444444444444444444444 /* FilterChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4444444444444444444444 /* FilterChip.swift */; };
+		AA5555555555555555555555 /* FeatureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5555555555555555555555 /* FeatureRow.swift */; };
+		AA6666666666666666666666 /* VerseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6666666666666666666666 /* VerseRow.swift */; };
+		CC8888888888888888888888 /* PronunciationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8888888888888888888888 /* PronunciationMode.swift */; };
+		CC9999999999999999999999 /* VoiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9999999999999999999999 /* VoiceManager.swift */; };
+		CCAAAAAAAAAAAAAAAAAAAAAA /* TransliterationCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAAAAAAAAAAAAAAAAAAAAAA /* TransliterationCleaner.swift */; };
+		EEFAV111111111111111111 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFAV111111111111111111 /* FavoritesManager.swift */; };
+		EEFAV222222222222222222 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFAV222222222222222222 /* FavoriteButton.swift */; };
+		FB1DB822B464D589533EB797 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F8680C9F95C4EA16EDF126 /* UserProgress.swift */; };
+		WDGT000000000000000001 /* SharedVerseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = WDGT000000000000000010 /* SharedVerseManager.swift */; };
+		WDGT000000000000000002 /* GitaDailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = WDGT000000000000000020 /* GitaDailyWidget.swift */; };
+		WDGT000000000000000003 /* SharedVerseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = WDGT000000000000000010 /* SharedVerseManager.swift */; };
+		WDGT000000000000000004 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEBD8D162FA915497CB832 /* Verse.swift */; };
+		WDGT000000000000000005 /* GitaDailyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = WDGT000000000000000050 /* GitaDailyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		WDGT000000000000000006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0243DCA7C44CC27A8820A5AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = WDGT000000000000000060;
+			remoteInfo = GitaDailyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		WDGT000000000000000007 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				WDGT000000000000000005 /* GitaDailyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		119742DBB6615C826816AE41 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		120819946D6776D5CF582AB9 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		1D0B363BD258B2C17E3ED103 /* GitaDailyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitaDailyApp.swift; sourceTree = "<group>"; };
+		356E19F3CC9DEB15F2B87C60 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3F8A5515D0CB832CFCB38367 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		56F8680C9F95C4EA16EDF126 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
+		7ACEBD8D162FA915497CB832 /* Verse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
+		7DAD0E439D53B1CB39927CF7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		A5EFDDF14ED934C71B24007A /* GitaDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitaDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1111111111111111111111 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BB2222222222222222222222 /* VerseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseDetailView.swift; sourceTree = "<group>"; };
+		BB3333333333333333333333 /* TopicBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicBadge.swift; sourceTree = "<group>"; };
+		BB4444444444444444444444 /* FilterChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChip.swift; sourceTree = "<group>"; };
+		BB5555555555555555555555 /* FeatureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRow.swift; sourceTree = "<group>"; };
+		BB6666666666666666666666 /* VerseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseRow.swift; sourceTree = "<group>"; };
+		C0453B94DEC0D02D785A6C1B /* verses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verses.json; sourceTree = "<group>"; };
+		DD8888888888888888888888 /* PronunciationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationMode.swift; sourceTree = "<group>"; };
+		DD9999999999999999999999 /* VoiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceManager.swift; sourceTree = "<group>"; };
+		DDAAAAAAAAAAAAAAAAAAAAAA /* TransliterationCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransliterationCleaner.swift; sourceTree = "<group>"; };
+		F843183A88EB3FCB92173C5C /* DailyVerseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyVerseService.swift; sourceTree = "<group>"; };
+		FD9D2D51EFBDF4EAE3D0575C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFFAV111111111111111111 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		FFFAV222222222222222222 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		WDGT000000000000000010 /* SharedVerseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedVerseManager.swift; sourceTree = "<group>"; };
+		WDGT000000000000000020 /* GitaDailyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitaDailyWidget.swift; sourceTree = "<group>"; };
+		WDGT000000000000000030 /* GitaDaily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitaDaily.entitlements; sourceTree = "<group>"; };
+		WDGT000000000000000040 /* GitaDailyWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitaDailyWidget.entitlements; sourceTree = "<group>"; };
+		WDGT000000000000000050 /* GitaDailyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GitaDailyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		WDGT000000000000000055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1AC83A2B83E035FC98707F22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5EFDDF14ED934C71B24007A /* GitaDaily.app */,
+				WDGT000000000000000050 /* GitaDailyWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30A94B6A30EB97664B7E0187 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				120819946D6776D5CF582AB9 /* AudioService.swift */,
+				F843183A88EB3FCB92173C5C /* DailyVerseService.swift */,
+				FFFAV111111111111111111 /* FavoritesManager.swift */,
+				7DAD0E439D53B1CB39927CF7 /* NotificationManager.swift */,
+				WDGT000000000000000010 /* SharedVerseManager.swift */,
+				DDAAAAAAAAAAAAAAAAAAAAAA /* TransliterationCleaner.swift */,
+				DD9999999999999999999999 /* VoiceManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		326E7D6F0DA68D4692653991 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC7777777777777777777777 /* Components */,
+				BB1111111111111111111111 /* AboutView.swift */,
+				FD9D2D51EFBDF4EAE3D0575C /* ContentView.swift */,
+				119742DBB6615C826816AE41 /* HistoryView.swift */,
+				356E19F3CC9DEB15F2B87C60 /* SettingsView.swift */,
+				3F8A5515D0CB832CFCB38367 /* TodayView.swift */,
+				BB2222222222222222222222 /* VerseDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41DAEB6804F87EFB0DF5949C = {
+			isa = PBXGroup;
+			children = (
+				FF1DE6577BD447FC2DE8CAFE /* GitaDaily */,
+				WDGT000000000000000070 /* GitaDailyWidget */,
+				1AC83A2B83E035FC98707F22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B08E1D444FDF7C18E4996DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD8888888888888888888888 /* PronunciationMode.swift */,
+				56F8680C9F95C4EA16EDF126 /* UserProgress.swift */,
+				7ACEBD8D162FA915497CB832 /* Verse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B046151C3DA1A24177483C0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0453B94DEC0D02D785A6C1B /* verses.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC7777777777777777777777 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FFFAV222222222222222222 /* FavoriteButton.swift */,
+				BB5555555555555555555555 /* FeatureRow.swift */,
+				BB4444444444444444444444 /* FilterChip.swift */,
+				BB3333333333333333333333 /* TopicBadge.swift */,
+				BB6666666666666666666666 /* VerseRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FF1DE6577BD447FC2DE8CAFE /* GitaDaily */ = {
+			isa = PBXGroup;
+			children = (
+				WDGT000000000000000030 /* GitaDaily.entitlements */,
+				1D0B363BD258B2C17E3ED103 /* GitaDailyApp.swift */,
+				6B08E1D444FDF7C18E4996DA /* Models */,
+				B046151C3DA1A24177483C0A /* Resources */,
+				30A94B6A30EB97664B7E0187 /* Services */,
+				326E7D6F0DA68D4692653991 /* Views */,
+			);
+			path = GitaDaily;
+			sourceTree = "<group>";
+		};
+		WDGT000000000000000070 /* GitaDailyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				WDGT000000000000000040 /* GitaDailyWidget.entitlements */,
+				WDGT000000000000000020 /* GitaDailyWidget.swift */,
+				WDGT000000000000000055 /* Info.plist */,
+			);
+			path = GitaDailyWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		615615EE0204C52AED8D703D /* GitaDaily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAE793E550F157A418F2813F /* Build configuration list for PBXNativeTarget "GitaDaily" */;
+			buildPhases = (
+				579E27BB482E6D73CAB86C65 /* Sources */,
+				E898109EA879FCE140BECACE /* Resources */,
+				WDGT000000000000000007 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				WDGT000000000000000008 /* PBXTargetDependency */,
+			);
+			name = GitaDaily;
+			packageProductDependencies = (
+			);
+			productName = GitaDaily;
+			productReference = A5EFDDF14ED934C71B24007A /* GitaDaily.app */;
+			productType = "com.apple.product-type.application";
+		};
+		WDGT000000000000000060 /* GitaDailyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = WDGT000000000000000080 /* Build configuration list for PBXNativeTarget "GitaDailyWidgetExtension" */;
+			buildPhases = (
+				WDGT000000000000000090 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitaDailyWidgetExtension;
+			productName = GitaDailyWidgetExtension;
+			productReference = WDGT000000000000000050 /* GitaDailyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0243DCA7C44CC27A8820A5AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = E4B63D72A5E517D57B44C6AB /* Build configuration list for PBXProject "GitaDaily" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 41DAEB6804F87EFB0DF5949C;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				615615EE0204C52AED8D703D /* GitaDaily */,
+				WDGT000000000000000060 /* GitaDailyWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E898109EA879FCE140BECACE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3554D7E5178C091C4C930A15 /* verses.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		579E27BB482E6D73CAB86C65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844A99A625D17110FE7FF65C /* AudioService.swift in Sources */,
+				A4B22B0763CF98470BE8F894 /* ContentView.swift in Sources */,
+				28C6F1AA95B0CCA031415E08 /* DailyVerseService.swift in Sources */,
+				EEFAV222222222222222222 /* FavoriteButton.swift in Sources */,
+				EEFAV111111111111111111 /* FavoritesManager.swift in Sources */,
+				503921D3A6B275244ADD7D93 /* GitaDailyApp.swift in Sources */,
+				88DA294832A1100358CD1BB4 /* HistoryView.swift in Sources */,
+				0D476C1B044C776D06D224F4 /* NotificationManager.swift in Sources */,
+				CC8888888888888888888888 /* PronunciationMode.swift in Sources */,
+				453EA8D227718C5230AFA1F5 /* SettingsView.swift in Sources */,
+				WDGT000000000000000001 /* SharedVerseManager.swift in Sources */,
+				8AC8D16BB9D664F6B19A65DB /* TodayView.swift in Sources */,
+				CCAAAAAAAAAAAAAAAAAAAAAA /* TransliterationCleaner.swift in Sources */,
+				FB1DB822B464D589533EB797 /* UserProgress.swift in Sources */,
+				86C440381837B7C9E420D727 /* Verse.swift in Sources */,
+				CC9999999999999999999999 /* VoiceManager.swift in Sources */,
+				AA1111111111111111111111 /* AboutView.swift in Sources */,
+				AA2222222222222222222222 /* VerseDetailView.swift in Sources */,
+				AA3333333333333333333333 /* TopicBadge.swift in Sources */,
+				AA4444444444444444444444 /* FilterChip.swift in Sources */,
+				AA5555555555555555555555 /* FeatureRow.swift in Sources */,
+				AA6666666666666666666666 /* VerseRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WDGT000000000000000090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				WDGT000000000000000002 /* GitaDailyWidget.swift in Sources */,
+				WDGT000000000000000003 /* SharedVerseManager.swift in Sources */,
+				WDGT000000000000000004 /* Verse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		WDGT000000000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = WDGT000000000000000060 /* GitaDailyWidgetExtension */;
+			targetProxy = WDGT000000000000000006 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		378704DE74E8F9913F0A23B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GitaDaily/GitaDaily.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulkassel.gitadaily;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AE4C021E3574021E3CA0E4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		C01D64132FA07C60C0B64AD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GitaDaily/GitaDaily.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulkassel.gitadaily;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DFD8EA479415E204BAB0DEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		WDGT0000000000000000A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = GitaDailyWidget/GitaDailyWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GitaDailyWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulkassel.gitadaily.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		WDGT0000000000000000A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = GitaDailyWidget/GitaDailyWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GitaDailyWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulkassel.gitadaily.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAE793E550F157A418F2813F /* Build configuration list for PBXNativeTarget "GitaDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01D64132FA07C60C0B64AD1 /* Debug */,
+				378704DE74E8F9913F0A23B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E4B63D72A5E517D57B44C6AB /* Build configuration list for PBXProject "GitaDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD8EA479415E204BAB0DEEC /* Debug */,
+				AE4C021E3574021E3CA0E4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		WDGT000000000000000080 /* Build configuration list for PBXNativeTarget "GitaDailyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				WDGT0000000000000000A1 /* Debug */,
+				WDGT0000000000000000A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0243DCA7C44CC27A8820A5AC /* Project object */;
+}
