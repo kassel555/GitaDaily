@@ -11,6 +11,7 @@
 		28C6F1AA95B0CCA031415E08 /* DailyVerseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F843183A88EB3FCB92173C5C /* DailyVerseService.swift */; };
 		3554D7E5178C091C4C930A15 /* verses.json in Resources */ = {isa = PBXBuildFile; fileRef = C0453B94DEC0D02D785A6C1B /* verses.json */; };
 		ICON000000000000000002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ICON000000000000000001 /* Assets.xcassets */; };
+		LNCH000000000000000002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = LNCH000000000000000001 /* LaunchScreen.storyboard */; };
 		453EA8D227718C5230AFA1F5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E19F3CC9DEB15F2B87C60 /* SettingsView.swift */; };
 		503921D3A6B275244ADD7D93 /* GitaDailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B363BD258B2C17E3ED103 /* GitaDailyApp.swift */; };
 		844A99A625D17110FE7FF65C /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120819946D6776D5CF582AB9 /* AudioService.swift */; };
@@ -92,6 +93,7 @@
 		WDGT000000000000000050 /* GitaDailyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GitaDailyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		WDGT000000000000000055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ICON000000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		LNCH000000000000000001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -177,6 +179,7 @@
 				ICON000000000000000001 /* Assets.xcassets */,
 				WDGT000000000000000030 /* GitaDaily.entitlements */,
 				1D0B363BD258B2C17E3ED103 /* GitaDailyApp.swift */,
+				LNCH000000000000000001 /* LaunchScreen.storyboard */,
 				6B08E1D444FDF7C18E4996DA /* Models */,
 				B046151C3DA1A24177483C0A /* Resources */,
 				30A94B6A30EB97664B7E0187 /* Services */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ICON000000000000000002 /* Assets.xcassets in Resources */,
+				LNCH000000000000000002 /* LaunchScreen.storyboard in Resources */,
 				3554D7E5178C091C4C930A15 /* verses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
