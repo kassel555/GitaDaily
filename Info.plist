@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>260101</string>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>We'll send you a daily reminder to learn today's verse and help you maintain your streak</string>
 	<key>UILaunchStoryboardName</key>
